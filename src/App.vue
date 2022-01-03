@@ -1,28 +1,32 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app-wrapper">
+    <Header />
+    <transition name="slide-scale" mode="out-in">
+      <router-view class="router-view" />
+    </transition>
+    <Footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Header from './components/inc/Header.vue'
+import Footer from './components/inc/Footer.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld,
-  },
-};
+  components: { Header, Footer }
+}
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.app-wrapper {
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  @include flex;
+  @include flexCol;
+  .router-view {
+    flex-grow: 1;
+  }
 }
 </style>
