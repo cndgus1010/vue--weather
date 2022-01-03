@@ -1,6 +1,6 @@
 <template>
   <footer>
-    ⓒ copyright booldook. Allright reserved.
+    ⓒ copyright chung. Allright reserved.
   </footer>
 </template>
 
