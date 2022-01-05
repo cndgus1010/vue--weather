@@ -1,6 +1,6 @@
 <template>
   <footer>
-    ⓒ copyright chung. Allright reserved.
+    ⓒ copyright chunghyeon. Allright reserved.
   </footer>
 </template>
 
